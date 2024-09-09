@@ -76,6 +76,7 @@ const RegisterFrom: React.FC = () => {
               </div>
             </div>
             <div>
+              {/* kjjihiih */}
               <div className="mt-2">
                 <div className='text-xs text-left mb-2'>Enter your Email</div>
                 <input id="Email" name="Email" type="Email" value={member.Email} onChange={handleInputChange} required autoComplete="Email" className="block w-full rounded-full  text-center  bg-password py-3 text-white shadow-sm  "
