@@ -23,7 +23,7 @@ const Stepper: React.FC = () => {
                 return (
                     <div>
                         <div className="mt-2">
-                            <div className="text-xs text-left mb-2 xl:text-lg">Firstname</div>
+                            <div className="text-xs text-left mb-2 xl:text-lg text-white">Firstname</div>
                             <input
                                 id="Firstname"
                                 name="Firstname"
@@ -34,20 +34,20 @@ const Stepper: React.FC = () => {
                                 placeholder="Enter firstname"
                             />
                             <div className="mt-2">
-                                <div className="text-xs text-left mb-2 xl:text-lg">Lastname</div>
+                                <div className="text-xs text-left mb-2 xl:text-lg text-white">Lastname</div>
                                 <input
                                     id="Lastname"
                                     name="Lastname"
                                     type="Lastname"
                                     required
                                     autoComplete="Lastname"
-                                    className="block w-full rounded-full  text-center  bg-password py-3 text-black shadow-sm  "
+                                    className="block w-full rounded-full  text-center  bg-password py-3 text-white shadow-sm  "
                                     placeholder="Enter lastname"
                                 />
                             </div>
 
                             <div>
-                                <form className="max-w-sm mx-auto mt-8 ">
+                                <form className="max-w-sm mx-auto mt-8  ">
                                     <label htmlFor="underline_select" className="sr-only">
                                         Underline select
                                     </label>
@@ -68,19 +68,19 @@ const Stepper: React.FC = () => {
                 return (
                     <div>
                         <div className="mt-2">
-                            <div className="text-xs text-left mb-2  xl:text-lg">Phone Number</div>
+                            <div className="text-xs text-left mb-2  xl:text-lg text-white">Phone Number</div>
                             <input
                                 id="PhoneNumber"
                                 name="PhoneNumber"
                                 type="PhoneNumber"
                                 required
                                 autoComplete="PhoneNumber"
-                                className="block w-full rounded-full  text-center  bg-password py-3 text-black shadow-sm  "
+                                className="block w-full rounded-full  text-center  bg-password py-3 text-white shadow-sm  "
                                 placeholder="Enter Phone Number"
                             />
                         </div>
                         <div className="mt-2">
-                            <div className="text-xs text-left mb-2 xl:text-lg">Email</div>
+                            <div className="text-xs text-left mb-2 xl:text-lg text-white">Email</div>
                             <input
                                 id="Email"
                                 name="Email"
@@ -97,7 +97,7 @@ const Stepper: React.FC = () => {
                 return (
                     <div>
                         <div className="mt-2">
-                            <div className="text-xs text-left mb-2 xl:text-lg">Username</div>
+                            <div className="text-xs text-left mb-2 xl:text-lg text-white">Username</div>
                             <input
                                 id="Username"
                                 name="Username"
@@ -109,7 +109,7 @@ const Stepper: React.FC = () => {
                             />
                         </div>
                         <div className="mt-2">
-                            <div className="text-xs text-left mb-2 xl:text-lg">Password</div>
+                            <div className="text-xs text-left mb-2 xl:text-lg text-white">Password</div>
                             <input
                                 id="password"
                                 name="password"
