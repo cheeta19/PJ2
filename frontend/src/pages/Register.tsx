@@ -1,26 +1,24 @@
-import React from 'react';
-import Header from '../components/Header.tsx';
-import RegisterFrom from '../components/RegisterForm.tsx';
-import SideText from '../components/SideText';
-const Register = () => {
-  
-    return(
-      <div className='text-white border h-screen w-full justify-center bg-cover' style={{ backgroundImage: "url('../src/assets/bg.jpg')" }}>
-      <div >
-        <div className="row ">
-          {/* Header */}
-          <div className="">
-            <Header />
-          </div >
-          <div className='items-center'><RegisterFrom/>
-          </div>
-          <div className='items-end '><SideText /></div>
+import "../App.css";
+import React from "react";
+import bgPic from "../assets/bg.jpg";
+import Navbar from "../components/Navbar";
+import SlideText from "../components/SideText";
+import RegisterFrom from "../components/RegisterForm";
 
-          {/* Side Text */}
-          
+
+const Home: React.FC = () => {
+    return (
+        <div>
+            <div className="h-[700px] relative ">
+                <img src={bgPic} alt="background" className="fixed right-0 top-0 h-full w-screen object-cover -z-10 " />
+                <Navbar />
+                <div className="items-center"><RegisterFrom /></div>
+                
+            </div>
+            <div className="w-full"><SlideText /></div>
+            {/* About */}
         </div>
-      </div>
-    </div>
-    )
-}
-export default Register;
+    );
+};
+
+export default Home;

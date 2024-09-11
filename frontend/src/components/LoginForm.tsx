@@ -17,14 +17,14 @@ const LoginForm: React.FC = () => {
           <form action="#" method="POST" className="space-y-6">
             <div>
               <div className="mt-2 text-left "> 
-                <div className='text-xs mb-2'>Enter your Username</div>
+                <div className='text-sm mb-2 text-white'>Enter your Username</div>
                 <input id="username" name="username" type="username" required autoComplete="username" className="block w-full rounded-full  text-center bg-password py-3 text-white shadow-sm  "
                 placeholder='Username' />
               </div>
             </div>
           <div>
               <div className="mt-2 text-left">
-                <div className='text-xs mb-2'>Enter your Password</div>
+                <div className='text-sm mb-2 text-white'>Enter your Password</div>
                 <input id="password" name="password" type="password" required autoComplete="password" className="block w-full rounded-full  text-center  bg-password py-3 text-white shadow-sm  "
                 placeholder='Password' />
               </div>
@@ -38,7 +38,7 @@ const LoginForm: React.FC = () => {
                 </button>
               </Link>
 
-              <div className='mt-5'>Don't have an account?<Link to="/Register" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign Up</Link></div>
+              <div className='mt-5 text-white'>Don't have an account? <Link to="/Register" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign Up</Link></div>
             </div>
           </form>
 

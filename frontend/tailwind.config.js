@@ -32,6 +32,13 @@ export default {
         'desktop': '1280px',
         // => @media (min-width: 1280px) { ... }
       },
+      container: {
+        center: true,
+        padding: {
+            DEFAULT: "1rem",
+            sm: "2rem",
+        },
+    },
   },
   plugins: [],
 }
