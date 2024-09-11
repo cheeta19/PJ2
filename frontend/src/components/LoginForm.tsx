@@ -1,7 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import {LoginInterface} from "../interface/ILogin"
+import { GetMembers } from '../service/https';
 
-const LoginForm: React.FC = () => {
+
+const LoginForm: React.FC = () => { 
+  const [username,setUsername] = useState<string>("")
+  const [password,setPassword] = useState<string>("")
+  
+  const handleSubmit = async  ()=>{
+    const values:LoginInterface = {
+      UserName: username,
+      Password: password,
+    } 
+  
+
+  };
+
   return (
     <div className="h-full flex mt-20 mb-20 p-15">
       <div className="w-1/5 text-center"></div>
@@ -19,14 +34,14 @@ const LoginForm: React.FC = () => {
               <div className="mt-2 text-left "> 
                 <div className='text-sm mb-2 text-white'>Enter your Username</div>
                 <input id="username" name="username" type="username" required autoComplete="username" className="block w-full rounded-full  text-center bg-password py-3 text-white shadow-sm  "
-                placeholder='Username' />
+                placeholder='Username'  onChange= {(e)=>{setUsername(e.target.value)}} />
               </div>
             </div>
           <div>
               <div className="mt-2 text-left">
                 <div className='text-sm mb-2 text-white'>Enter your Password</div>
                 <input id="password" name="password" type="password" required autoComplete="password" className="block w-full rounded-full  text-center  bg-password py-3 text-white shadow-sm  "
-                placeholder='Password' />
+                placeholder='Password' onChange={(e)=>{setPassword(e.target.value)}}/>
               </div>
             </div>
 
@@ -34,7 +49,7 @@ const LoginForm: React.FC = () => {
               <Link to="/login">
                 <button
                 className="w-4/5 mb-4 text-2xl mt-3 rounded-full bg-lime-400 text-black hover:bg-black hover:text-white py-2 transition-colors duration-300"
-                type="button">Login
+                type="button" onClick={handleSubmit}>Login 
                 </button>
               </Link>
 
@@ -49,5 +64,6 @@ const LoginForm: React.FC = () => {
     </div>
   );
 };
+
 
 export default LoginForm;

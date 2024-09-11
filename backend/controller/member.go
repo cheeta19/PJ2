@@ -69,6 +69,39 @@ func GetMember(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, member)
 }
+func GetUsername(c *gin.Context) {
+	Username := c.Param("username")
+	var member entity.Member
+
+	db := config.DB()
+	results := db.Preload("Gender").First(&member, Username)
+	if results.Error != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": results.Error.Error()})
+		return
+	}
+	if member.ID == 0 {
+		c.JSON(http.StatusNoContent, gin.H{})
+		return
+	}
+	c.JSON(http.StatusOK, member)
+}
+
+func GetPassword(c *gin.Context) {
+	Password := c.Param("password")
+	var member entity.Member
+
+	db := config.DB()
+	results := db.Preload("Gender").First(&member, Password)
+	if results.Error != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": results.Error.Error()})
+		return
+	}
+	if member.ID == 0 {
+		c.JSON(http.StatusNoContent, gin.H{})
+		return
+	}
+	c.JSON(http.StatusOK, member)
+}
 
 // GET /users
 func ListMembers(c *gin.Context) {
