@@ -30,7 +30,7 @@ const Stepper: React.FC = () => {
                                 type="Firstname"
                                 required
                                 autoComplete="Firstname"
-                                className="block w-full rounded-full  text-center  bg-password py-3 text-black shadow-sm  "
+                                className="block w-full rounded-full  text-center  bg-password py-3 text-white shadow-sm  "
                                 placeholder="Enter firstname"
                             />
                             <div className="mt-2">
