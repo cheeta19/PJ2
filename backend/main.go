@@ -31,8 +31,8 @@ func main() {
 		router.POST("/members", controller.CreateMember)
 		router.PATCH("/members", controller.UpdateMember)
 		router.DELETE("/members/:id", controller.DeleteMember)
-		router.GET("/members/:username",controller.GetUsername)
-		router.GET("/members/:password",controller.GetPassword)
+		// router.GET("/members/:username",controller.GetUsername)
+		// router.GET("/members/:password",controller.GetPassword)
 
 		// Gender Routes
 		router.GET("/genders", controller.ListGenders)
