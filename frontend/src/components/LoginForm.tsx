@@ -13,6 +13,7 @@ const LoginForm: React.FC = () => {
         const signInData: SignInInterface = {
             username,
             password,
+            role,
         };
 
         try {
