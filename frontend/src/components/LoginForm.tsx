@@ -8,14 +8,14 @@ import toast, { Toaster } from "react-hot-toast"; // Import toast functions
 const LoginForm: React.FC = () => {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const [role,setRole] = useState<string>("");
+    
     const navigate = useNavigate(); // ใช้สำหรับการนำทาง
 
     const handleSignIn = async () => {
         const signInData: SignInInterface = {
             username,
             password,
-            role,
+            
         };
 
         try {
