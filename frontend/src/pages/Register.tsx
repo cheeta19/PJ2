@@ -3,7 +3,7 @@ import React from "react";
 import bgPic from "../assets/bg.jpg";
 import Navbar from "../components/Navbar";
 import SlideText from "../components/SideText";
-import RegisterFrom from "../components/RegisterForm";
+import RegisterFrom from "../components/Register/RegisterForm";
 
 
 const Home: React.FC = () => {

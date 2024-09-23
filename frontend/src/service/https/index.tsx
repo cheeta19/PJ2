@@ -1,6 +1,6 @@
 import { MembersInterface } from "../../interface/IMembers";
 import { AdminsInterface } from "../../interface/IAdmin";
-
+import { SignInInterface} from "../../interface/ISignIn";
 const apiUrl = "http://localhost:8000";
 
 async function GetMembers() {
@@ -209,6 +209,21 @@ async function GetAdmins() {
   
     return res;
   }
+  async function SignIn(data: SignInInterface) {
+    const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+    };
+
+    try {
+        const result = await fetch(`${apiUrl}/login`, requestOptions);
+        return result;
+    } catch (error) {
+        console.error("SignIn failed:", error);
+        throw error; // Rethrow the error to handle it in the calling function
+    }
+}
 
 export {
   GetMembers,
@@ -222,4 +237,5 @@ export {
   GetAdminById,
   CreateAdmin,
   UpdateAdmin,
+  SignIn,
 };

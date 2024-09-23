@@ -42,6 +42,9 @@ func CreateMember(c *gin.Context) {
 		GenderID:  member.GenderID,
 		Gender:    genders, // โยงความสัมพันธ์กับ Entity Gender
 		Age: member.Age,
+		TypeMember:member.TypeMember,
+		PaymentStatus:member.PaymentStatus,
+		SuspensionStatus:member.SuspensionStatus,
 	}
 
 	// บันทึก

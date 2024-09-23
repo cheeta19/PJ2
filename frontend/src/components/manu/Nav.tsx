@@ -70,11 +70,11 @@ const Nav: React.FC<NavbarProps> = ({ title }) => {
                         </span>
                     </div>
                     {isDropdownOpen && (
-                        <div className="absolute right-0 mt-[185px] w-48 bg-gray4 bg-opacity-95 border border-green3 rounded-lg shadow-lg z-10">
+                        <div className="absolute right-0 mt-[185px] w-48 bg-sidebar bg-opacity-95 border border-green rounded-lg shadow-lg z-10">
                             <ul className="text-white p-2">
-                                <li className="p-2 hover:bg-green5 cursor-pointer">Profile</li>
-                                <li className="p-2 hover:bg-green5 cursor-pointer">Settings</li>
-                                <li className="p-2 hover:bg-green5 cursor-pointer" onClick={handleLogout}>
+                                <li className="p-2 hover:bg-hover cursor-pointer">Profile</li>
+                                <li className="p-2 hover:bg-hover cursor-pointer">Settings</li>
+                                <li className="p-2 hover:bg-hover cursor-pointer" onClick={handleLogout}>
                                     Logout
                                 </li>
                             </ul>

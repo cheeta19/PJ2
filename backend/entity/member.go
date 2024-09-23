@@ -19,6 +19,6 @@ type Member struct {
 	TypeMember string
 	PaymentStatus string
 	SuspensionStatus string
-	Age uint
+	Age string
 	Gender    Genders  `gorm:"foreignKey: gender_id" json:"gender"`
 }

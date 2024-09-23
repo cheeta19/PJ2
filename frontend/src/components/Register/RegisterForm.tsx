@@ -1,6 +1,6 @@
 
 import React from "react";
-import Stepper from "./Stepper";
+import Stepper from "../Register/Stepper";
 
 const RegisterFrom: React.FC = () => {
     return (

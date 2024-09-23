@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { MembersInterface } from "../interface/IMembers"; // นำเข้า interface
-import { CreateMember } from "../service/https";
+import { MembersInterface } from "../../interface/IMembers"; // นำเข้า interface
+import { CreateMember } from "../../service/https";
 
 const Stepper: React.FC = () => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -13,6 +13,7 @@ const Stepper: React.FC = () => {
         GenderID: undefined,
         Password: "",
         Age: undefined,
+        
     });
 
     const steps = ["Personal Info", "Contact", "Account Info"];
@@ -46,16 +47,22 @@ const Stepper: React.FC = () => {
             console.log("Form Data:", formData);
             let res = await CreateMember(formData); // ส่งข้อมูล formData ไปที่ API
             console.log(res);
-            if (res.ok) {
+            if (res) {
                 alert('ข้อมูลของท่านเข้าสู่ระบบ');
                 // Reset form or navigate user
+            } else if (res.errors) {
+                console.log('Errors:', res.errors);
+                // If the API returns specific errors
+                alert(`Submission failed: ${res.errors.join(', ')}`);
             } else {
-                alert('ข้อมูลผิดพลาด กรุณาตรวจสอบใหม่อีกครั้ง');
+                console.log('Unknown error occurred');
+                alert('Submission failed, please try again.');
             }
         } catch (error) {
             console.error("Error saving data:", error);
             alert('Error saving data');
         }
+
     };
 
     const renderStepContent = () => {
@@ -107,9 +114,10 @@ const Stepper: React.FC = () => {
                             />
                         </div>
                         <div className="mt-2">
+                        <div className="text-xs text-left mb-2 xl:text-lg text-white">Gender</div>
                             <select
                                 id="gender"
-                                className="block w-full rounded-full text-center bg-white py-3 text-black mb-2"
+                                className="block w-full rounded-full text-center bg-password py-3 text-white  mt-2"
                                 value={formData.GenderID}
                                 onChange={(e) => handleInputChange(e, "GenderID")}
                             >
