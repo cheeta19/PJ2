@@ -16,5 +16,9 @@ type Member struct {
 	UserName string 
 	PhoneNumber 	string
 	GenderID  uint      
+	TypeMember string
+	PaymentStatus string
+	SuspensionStatus string
+	Age uint
 	Gender    Genders  `gorm:"foreignKey: gender_id" json:"gender"`
 }

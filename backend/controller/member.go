@@ -41,6 +41,7 @@ func CreateMember(c *gin.Context) {
 		PhoneNumber: member.PhoneNumber,
 		GenderID:  member.GenderID,
 		Gender:    genders, // โยงความสัมพันธ์กับ Entity Gender
+		Age: member.Age,
 	}
 
 	// บันทึก

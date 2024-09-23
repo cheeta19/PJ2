@@ -211,7 +211,7 @@ async function GetAdmins() {
   }
 
 export {
-    GetMembers,
+  GetMembers,
   CreateMember,
   GetGenders,
   DeleteMemberByID,

@@ -7,4 +7,5 @@ export interface MembersInterface {
     PhoneNumber?: string;
     GenderID?: number;
     Password?: string;
+    Age?: number;
   }

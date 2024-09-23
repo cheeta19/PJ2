@@ -12,6 +12,7 @@ const Stepper: React.FC = () => {
         PhoneNumber: "",
         GenderID: undefined,
         Password: "",
+        Age: undefined,
     });
 
     const steps = ["Personal Info", "Contact", "Account Info"];
@@ -30,7 +31,7 @@ const Stepper: React.FC = () => {
     const validateStep = () => {
         switch (currentStep) {
             case 1:
-                return formData.FirstName && formData.LastName && formData.GenderID;
+                return formData.FirstName && formData.LastName && formData.GenderID && formData.Age;
             case 2:
                 return formData.PhoneNumber && formData.Email;
             case 3:
@@ -90,10 +91,25 @@ const Stepper: React.FC = () => {
                                 onChange={(e) => handleInputChange(e, "LastName")}
                             />
                         </div>
+                        
+                        <div className="mt-2">
+                            <div className="text-xs text-left mb-2 xl:text-lg text-white">Age</div>
+                            <input
+                                id="Age"
+                                name="Age"
+                                type="text"
+                                required
+                                autoComplete="Age"
+                                className="block w-full rounded-full text-center bg-password py-3 text-white shadow-sm"
+                                placeholder="Enter your age"
+                                value={formData.Age}
+                                onChange={(e) => handleInputChange(e, "Age")}
+                            />
+                        </div>
                         <div className="mt-2">
                             <select
                                 id="gender"
-                                className="block w-full rounded-full text-center bg-white py-3 text-black"
+                                className="block w-full rounded-full text-center bg-white py-3 text-black mb-2"
                                 value={formData.GenderID}
                                 onChange={(e) => handleInputChange(e, "GenderID")}
                             >
