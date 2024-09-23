@@ -4,9 +4,11 @@ import { SignInInterface } from "../interface/ISignIn";
 import { SignIn } from "../service/https/index"; // Import your SignIn function
 import toast, { Toaster } from "react-hot-toast"; // Import toast functions
 
+
 const LoginForm: React.FC = () => {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
+    const [role,setRole] = useState<string>("");
     const navigate = useNavigate(); // ใช้สำหรับการนำทาง
 
     const handleSignIn = async () => {
