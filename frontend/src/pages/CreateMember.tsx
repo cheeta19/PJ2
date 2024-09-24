@@ -19,10 +19,10 @@ const CreateMember: React.FC = () => {
 
                 </div>
                 <div className="flex flex-wrap justify-center">
-                    <div className=" mt-5 w-[1500px] h-[1000px] rounded-3xl overflow-auto scrollable-div flex justify-center bg-sidebar backdrop-blur-sm">
-                        <div className="flex flex-row items-start m-8 text-secondary ">
+                    <div className="bg-gray-800 mx-20 mt-5 w-full rounded-3xl overflow-auto scrollable-div flex justify-center bg-sidebar backdrop-blur-sm">
+                        {/* <div className="flex flex-row items-start m-10 text-secondary "> */}
                              <CreateForm />
-                        </div>
+                        {/* </div> */}
                     </div>
                 </div>
             </div>
